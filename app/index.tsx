@@ -3,6 +3,7 @@ import { ResizingButton } from "@/components/Buttons/resizable";
 import InputField1 from "@/components/InputFields/InputField1";
 import LayoutWrapper from "@/components/LayoutWrapper";
 import Checkbox from "expo-checkbox";
+import { router } from "expo-router";
 import { useState } from "react";
 import { Pressable, Text, View } from "react-native";
 
@@ -13,7 +14,7 @@ export default function App() {
 
   return (
     <LayoutWrapper>
-      <View className="bg-white h-full items-center justify-center px-4">
+      <View className="bg-white flex-1 items-center justify-center px-4">
         <View className="w-full">
           <Text className="text-center font-poppins500 text-lg leading-[27px] mb-8">
             Login to proceed
@@ -44,7 +45,7 @@ export default function App() {
 
           <ResizingButton
             title="Sign in"
-            onPress={() => {}}
+            onPress={() => router.replace("/(tabs)")}
             className="bg-[#F46A62] py-4"
             textStyles="text-base text-white"
             isLoading={false}
